@@ -50,7 +50,7 @@ public class CategoryController {
 	
 	@DeleteMapping("/deleted/{id}")
 	public void delete(@PathVariable String id) {		
-		Category s = categoryRepository.findbyname(id);
+		Category s = categoryRepository.findByName(id);
 		categoryRepository.delete(s);
 	}
 }
